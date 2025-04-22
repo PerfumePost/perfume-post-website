@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+    color: rgba(210,154,59,255);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    padding: 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin-left: auto;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: black;
+    color: rgba(210,154,59,255);
+    border: 2px solid rgba(210,154,59,255);
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(210,154,59,255);
+    color: black;
+}
+
+/* Underline for Header */
+.underline {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(210,154,59,255);
+    margin: 10px auto;
+}
+
+/* Logo Styling */
+.logo-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: -30px;
+}
+
+#fade-logo {
+    width: 600px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 2s ease-in forwards;
+}
+
+/* Scroll animation styles */
+.scroll-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    margin: 50px auto;
+    width: 80%;
+    color: rgba(210,154,59,255);
+}
+
+/* Active class applied via JavaScript */
+.scroll-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 2px solid rgba(210,154,59,255);
+}
+
+footer p {
+    color: rgba(210,154,59,255);
+    font-size: 1em;
+}
+
+/* Contact Link */
+.contact-link {
+    color: rgba(210,154,59,255);
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    filter: brightness(0) invert(1); /* Makes them gold */
+}
+
+/* Image Styling for Pictures Page */
+.gallery-img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(210,154,59,255);
+}
+
+/* Logo Fade-in Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
