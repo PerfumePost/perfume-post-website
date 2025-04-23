@@ -123,9 +123,18 @@ footer p {
     gap: 15px;
 }
 
+.social-icons a {
+    display: inline-block;
+}
+
 .social-icons img {
     width: 30px;
     filter: brightness(0) invert(1); /* Makes them gold */
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    filter: brightness(0.8) invert(0.9); /* Darker gold on hover */
 }
 
 /* Image Styling for Pictures Page */
