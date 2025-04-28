@@ -1,3 +1,4 @@
+/* Base Styles - Mobile First Approach */
 body {
     background-color: black;
     color: rgba(210,154,59,255);
@@ -16,8 +17,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;            /* Use broader percentage on mobile */
+    max-width: 1200px;     /* Limit on larger screens */
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 h1 {
@@ -51,7 +54,7 @@ nav {
 
 /* Underline for Header */
 .underline {
-    width: 80%;
+    width: 90%;
     height: 2px;
     background-color: rgba(210,154,59,255);
     margin: 10px auto;
@@ -66,7 +69,8 @@ nav {
 }
 
 #fade-logo {
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     opacity: 0;
     transform: translateY(50px);
     animation: fadeUp 2s ease-in forwards;
@@ -78,7 +82,8 @@ nav {
     transform: translateY(40px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     margin: 50px auto;
-    width: 80%;
+    width: 90%;
+    max-width: 800px;
     color: rgba(210,154,59,255);
 }
 
@@ -91,11 +96,13 @@ nav {
 /* Footer */
 footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: black;
     padding: 20px;
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     border-top: 2px solid rgba(210,154,59,255);
 }
@@ -139,7 +146,8 @@ footer p {
 
 /* Image Styling for Pictures Page */
 .gallery-img {
-    width: 250px;
+    width: 90%;
+    max-width: 250px;
     margin: 10px;
     border-radius: 10px;
     border: 2px solid rgba(210,154,59,255);
@@ -166,5 +174,51 @@ footer p {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* Media Queries for larger screens */
+@media only screen and (min-width: 768px) {
+    .nav-container {
+        width: 80%;   /* Narrower container on larger screens */
+    }
+
+    .underline {
+        width: 80%;
+    }
+
+    .scroll-text {
+        width: 80%;
+    }
+}
+
+
+/* Additional adjustments for very small screens */
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        max-width: 250px;
+        font-size: 0.9em;
+    }
+
+    #fade-logo {
+        max-width: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
     }
 }
