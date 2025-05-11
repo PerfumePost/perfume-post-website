@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     background-color: black;
     color: rgba(210,154,59,255);
@@ -130,7 +132,7 @@ footer p {
 
 .social-icons img {
     width: 30px;
-    filter: brightness(0) invert(1); /* Gold filter */
+    filter: brightness(0) invert(1); /* Makes them gold */
     transition: 0.3s ease-in-out;
 }
 
