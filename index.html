@@ -27,6 +27,17 @@
             <img src="Images/logopic.jpg" alt="Perfume Post Logo" id="fade-logo">
         </div>
 
+        <!-- Video Container with Custom Play Button -->
+        <div class="video-container">
+            <video id="promo-video" muted>
+                <source src="Videos/vendingmachinevideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="play-button" class="play-button">
+                <span class="play-icon">&#9654;</span> <!-- YouTube play icon -->
+            </button>
+        </div>
+
         <section class="scroll-text">
             <h2>Elegance in Every Drop</h2>
             <p>Perfume Post brings an easy way and convenient way for you to smell incredible.</p>
@@ -45,7 +56,7 @@
 
     <footer>
         <p>© 2025 Perfume Post</p>
-        <a href="#" class="contact-link">Contact Us</a>
+        <a href="contacts.html" class="contact-link">Contact Us</a>
         <div class="social-icons">
             <a href="https://www.instagram.com/perfumepostabz?utm_source=qr&igsh=dDkyMmM5MWEwOTQ2" target="_blank">
                 <img src="Images/instagram.png" alt="Instagram">
@@ -60,5 +71,20 @@
     </footer>
 
     <script src="scroll-animation.js"></script>
+    <script>
+        // Get the video and play button
+        const video = document.getElementById('promo-video');
+        const playButton = document.getElementById('play-button');
+
+        // Play button event listener
+        playButton.addEventListener('click', function() {
+            // Play the video when the play button is clicked
+            video.play();
+            // Unmute the video
+            video.muted = false;
+            // Hide the play button when video is playing
+            playButton.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
