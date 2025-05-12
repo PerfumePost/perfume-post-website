@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     background-color: black;
     color: rgba(210,154,59,255);
@@ -18,6 +19,7 @@ header {
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -31,6 +33,7 @@ h1 {
 nav {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .nav-btn {
@@ -86,7 +89,6 @@ nav {
     animation: fadeUp 2s ease-in forwards;
 }
 
-/* Video Styling */
 #promo-video {
     display: block;
     margin: 0 auto;
@@ -129,7 +131,7 @@ nav {
     font-weight: bold;
 }
 
-/* Contact Us Button */
+/* Contact Us Link */
 .contact-link {
     color: rgba(210,154,59,255);
     text-decoration: none;
@@ -145,6 +147,7 @@ nav {
     text-decoration: underline;
 }
 
+/* Scroll Text */
 .scroll-text {
     opacity: 0;
     transform: translateY(40px);
@@ -159,7 +162,7 @@ nav {
     transform: translateY(0);
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -169,17 +172,22 @@ footer {
     width: 80%;
     margin: 0 auto;
     border-top: 2px solid rgba(210,154,59,255);
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
 }
 
 footer p {
     color: rgba(210,154,59,255);
     font-size: 1em;
+    flex: 1;
 }
 
-/* Social Icons Styling */
+/* Social Icons */
 .social-icons {
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 
 .social-icons a {
@@ -219,79 +227,53 @@ footer p {
     }
 }
 
-/* Mobile Responsive Styling */
-@media (max-width: 768px) {
-
-    body {
-        font-size: 16px;
-        padding: 0;
-        margin: 0;
-    }
-
-    header {
-        padding: 10px;
+/* -------------------- */
+/* Mobile Responsiveness */
+/* -------------------- */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        margin: 10px 0;
+        text-align: center;
     }
 
     .nav-container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        width: 95%;
     }
 
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 
     .nav-btn {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
-
-    h1 {
-        font-size: 1.5em;
-        text-align: center;
-        margin: 10px 0 0 0;
-    }
-
-    .logo-container {
-        margin-top: 0;
+        width: 90%;
+        margin: 5px 0;
     }
 
     #fade-logo {
-        width: 100%;
-        max-width: 90%;
+        width: 90%;
     }
 
     .video-container {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    #promo-video {
-        max-height: 50vh;
+        width: 95%;
     }
 
     .scroll-text {
         width: 90%;
-        margin: 30px auto;
         font-size: 1em;
     }
 
     footer {
         flex-direction: column;
-        text-align: center;
+        width: 95%;
         gap: 10px;
-        width: 100%;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
-
-    .contact-link {
-        display: block;
-        margin-top: 10px;
+    .social-icons img {
+        width: 25px;
     }
 }
