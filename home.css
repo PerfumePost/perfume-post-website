@@ -83,7 +83,7 @@ nav {
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeUp 2s ease-in forwards; /* Fade-in animation */
+    animation: fadeUp 2s ease-in forwards;
 }
 
 /* Video Styling */
@@ -99,7 +99,7 @@ nav {
     object-fit: contain;
 }
 
-/* Play Button Styling (YouTube-like) */
+/* Play Button Styling */
 .play-button {
     position: absolute;
     top: 50%;
@@ -113,8 +113,8 @@ nav {
     cursor: pointer;
     opacity: 0.9;
     transition: background-color 0.3s ease;
-    width: 60px;  /* Size of button */
-    height: 60px; /* Size of button */
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,11 +125,11 @@ nav {
 }
 
 .play-icon {
-    font-size: 30px; /* Size of the play triangle */
+    font-size: 30px;
     font-weight: bold;
 }
 
-/* Contact Us Button - Keep it gold after clicking */
+/* Contact Us Button */
 .contact-link {
     color: rgba(210,154,59,255);
     text-decoration: none;
@@ -138,7 +138,7 @@ nav {
 }
 
 .contact-link:visited {
-    color: rgba(210,154,59,255); /* Ensure it remains gold after clicking */
+    color: rgba(210,154,59,255);
 }
 
 .contact-link:hover {
@@ -196,6 +196,7 @@ footer p {
     filter: brightness(0.8) invert(0.9);
 }
 
+/* Animations */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -215,5 +216,82 @@ footer p {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+
+    .logo-container {
+        margin-top: 0;
+    }
+
+    #fade-logo {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .video-container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    #promo-video {
+        max-height: 50vh;
+    }
+
+    .scroll-text {
+        width: 90%;
+        margin: 30px auto;
+        font-size: 1em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 10px;
     }
 }
